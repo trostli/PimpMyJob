@@ -10,12 +10,11 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
-group :doc do
-  # bundle exec rake doc:rails generates the API under doc/api.
-  gem 'sdoc', require: false
-end
-
-group :development, :test do
+group :development do
   gem 'debugger'
+  gem 'faker'
+  gem 'dotenv-rails'
+  gem 'awesome_print'
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
-
