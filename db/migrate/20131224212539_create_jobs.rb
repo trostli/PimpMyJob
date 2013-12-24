@@ -1,5 +1,5 @@
 class CreateJobs < ActiveRecord::Migration
-  def change
+  def up
     create_table :jobs do |t|
       t.belongs_to :category
       t.string :title
@@ -10,5 +10,9 @@ class CreateJobs < ActiveRecord::Migration
 
       t.timestamps
     end
+  end
+
+  def down
+    drop_table :jobs
   end
 end
