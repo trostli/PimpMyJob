@@ -3,6 +3,7 @@ class CreateJobs < ActiveRecord::Migration
     create_table :jobs do |t|
       t.belongs_to :category
       t.string :title
+      t.string :compensation
       t.text :description
       t.string :address
       t.float :latitude
