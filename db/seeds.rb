@@ -26,13 +26,11 @@ end
 end
 
 200.times do |i|
-  category_name = category_helper
-
   job_attributes = {
     :category_id => rand(@categories.length)+1,
-    :title => i,
+    :title => Faker::Name.title,
     :company => Faker::Company.name,
-    :compensation => "$" + Faker::Number(2).to_s + " an hour",
+    :compensation => "$" + ((rand(10)+1) * (rand(10)+1) + 7).to_s + " an hour",
     :description => Faker::Lorem.paragraph,
     :address => Faker::Address.street_address,
     :latitude => location_helper(:latitude),
