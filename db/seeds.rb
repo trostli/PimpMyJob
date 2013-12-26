@@ -29,7 +29,7 @@ end
   category_name = category_helper
 
   job_attributes = {
-    :category_id: rand(@categories.length)+1
+    :category_id => rand(@categories.length)+1,
     :title => i,
     :company => Faker::Company.name,
     :compensation => "$" + Faker::Number(2).to_s + " an hour",
