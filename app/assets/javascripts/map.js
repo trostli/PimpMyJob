@@ -17,7 +17,9 @@ function initializeMap() {
     proMapper.makeMap();
 }
 
-$(document).ready(initializeMap)
+
+google.maps.event.addDomListener(window, "load", initializeMap);
+
 
 
 
