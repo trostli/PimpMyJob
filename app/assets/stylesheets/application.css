@@ -11,3 +11,15 @@
  *= require_self
  *= require_tree .
  */
+
+ html, body {
+    height: 100%;
+    width: 100%;
+}
+
+#map-canvas {
+    min-height: 100%;
+    min-width: 100%;
+}
+
+
