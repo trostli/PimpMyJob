@@ -15,7 +15,8 @@ proMapper.getMarkers = function() {
     $.ajax({
       url:"/categories",
       type: "GET",
-      dataType: "json"
+      dataType: "json",
+      data: $('#category_form').serialize()
     }).done(proMapper.saveMarkers)
 }
 
