@@ -11,7 +11,9 @@ proMapper.makeMap = function() {
   proMapper.map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
 }
 
-proMapper.getMarkers = function() {
+proMapper.getMarkers = function(e) {
+    e.preventDefault();
+    console.log("AJAX!")
     $.ajax({
       url:"/categories",
       type: "GET",
@@ -26,7 +28,7 @@ proMapper.saveMarkers = function(markerData) {
 
 function initializeMap() {
     proMapper.makeMap();
-    proMapper.getMarkers();
+    $('#category_form').on('submit', proMapper.getMarkers);
 }
 
 
