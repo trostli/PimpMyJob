@@ -1,4 +1,3 @@
-
 proMapper = {}
 
 proMapper.infoWindow = new google.maps.InfoWindow;
@@ -12,9 +11,21 @@ proMapper.makeMap = function() {
   proMapper.map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
 }
 
+proMapper.getMarkers = function() {
+    $.ajax({
+      url:"/categories",
+      type: "GET",
+      dataType: "json"
+    }).done(proMapper.saveMarkers)
+}
+
+proMapper.saveMarkers = function(markerData) {
+  proMapper.markerData = markerData;
+}
 
 function initializeMap() {
     proMapper.makeMap();
+    proMapper.getMarkers();
 }
 
 
