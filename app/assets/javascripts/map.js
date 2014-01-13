@@ -33,7 +33,11 @@ proMapper.saveMarkers = function(markerData) {
 proMapper.MakeMarkers = function(markerData) {
   var self = this
   $.each(markerData, function(index, element) {
-    var contentInfo = ' Title: ' + String(element.title) + ' Compensation: '  + String(element.compensation) +  ' Description: '  + String(element.description) +  ' Address: '  + String(element.address) + ' '
+    var contentInfo = '<p>' + '<strong>Title: </strong>' + String(element.title) + '</p>'
+    +  '<p>' + '<strong>Compensation: </strong>'  + String(element.compensation) + '</p>'
+    + '<p>' + '<strong>Description: </strong>'  + String(element.description) + '</p>'
+    + '<p>' + '<strong>Address: </strong>'  + String(element.address) + '</p>';
+
     var marker = self.makeMarker(index, element)
 
     google.maps.event.addListener(marker, 'mouseover', function() {
