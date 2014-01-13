@@ -1,5 +1,7 @@
 proMapper = {}
 
+var markersArray = []
+var counter = 0
 proMapper.infoWindow = new google.maps.InfoWindow;
 
 proMapper.makeMap = function() {
@@ -66,9 +68,18 @@ proMapper.makeMarker = function (index, markerData) {
 
   });
   marker.setMap(this.map);
+  markersArray.push(marker);
 
-  // markersArray.push(marker);
   return marker
+}
+
+proMapper.clearMarkers = function() {
+  for (var i = 0; i < markersArray.length; i++) {
+    markersArray[i].setMap(null);
+  }
+
+  markersArray.length = 0;
+
 }
 
 
