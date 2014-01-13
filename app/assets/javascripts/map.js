@@ -31,7 +31,6 @@ proMapper.saveMarkers = function(markerData) {
 }
 
 proMapper.MakeMarkers = function(markerData) {
-  console.log(markerData)
   var self = this
   $.each(markerData, function(index, element) {
     var contentInfo = ' Title: ' + String(element.title) + ' Compensation: '  + String(element.compensation) +  ' Description: '  + String(element.description) +  ' Address: '  + String(element.address) + ' '
