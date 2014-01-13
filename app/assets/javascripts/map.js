@@ -31,6 +31,7 @@ proMapper.MakeMarkers = function(markerData) {
   console.log(markerData)
   var self = this
   $.each(markerData, function(index, element) {
+    var contentInfo = ' Title: ' + String(element.title) + ' Compensation: '  + String(element.compensation) +  ' Description: '  + String(element.description) +  ' Address: '  + String(element.address) + ' '
     var marker = self.makeMarker(index, element)
 
     google.maps.event.addListener(marker, 'mouseover', function() {
@@ -39,8 +40,7 @@ proMapper.MakeMarkers = function(markerData) {
 
       proMapper.infoWindow.open(proMapper.map, marker)
 
-      var content =  'Title: '  + String(title) + ' compensation: ' + ' description: ' + String(address) + ' '
-
+      var content =  contentInfo;
       // var link = '<a href=/spots/' + spot_id + '>Reserve this Spot</a>'
 
       proMapper.infoWindow.setContent(content)
