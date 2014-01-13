@@ -25,6 +25,7 @@ proMapper.getMarkers = function(e) {
 }
 
 proMapper.saveMarkers = function(markerData) {
+  proMapper.clearMarkers();
   proMapper.markerData = markerData;
   proMapper.MakeMarkers(markerData);
 }
