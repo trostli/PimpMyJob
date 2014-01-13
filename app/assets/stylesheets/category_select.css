@@ -12,7 +12,10 @@
 #title {
   text-align: left;
   color: white;
+  font-family: 'Oswald', sans-serif;
   float: left;
+  margin: 21px;
+  font-size: 2em;
 }
 
 select {
@@ -22,7 +25,7 @@ select {
   top: 50%;
   border-radius: 3px;
   color:white;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 0.80em;
   padding: 0.75em;
   text-shadow:rgba(0,0,0,0) 0px -1px;
