@@ -24,7 +24,55 @@ proMapper.getMarkers = function(e) {
 
 proMapper.saveMarkers = function(markerData) {
   proMapper.markerData = markerData;
+  proMapper.MakeMarkers(markerData);
 }
+
+proMapper.MakeMarkers = function(markerData) {
+  console.log(markerData)
+  var self = this
+  $.each(markerData, function(index, element) {
+    var marker = self.makeMarker(index, element)
+
+    google.maps.event.addListener(marker, 'mouseover', function() {
+
+      proMapper.infoWindow.setOptions({disableAutoPan : true })
+
+      proMapper.infoWindow.open(proMapper.map, marker)
+      debugger;
+
+      var content =  'Title: '  + String(title) + ' compensation: ' + ' description: ' + String(address) + ' '
+
+      // var link = '<a href=/spots/' + spot_id + '>Reserve this Spot</a>'
+
+      proMapper.infoWindow.setContent(content)
+
+    });
+  });
+}
+
+proMapper.makeMarker = function (index, markerData) {
+  console.log("YEAH!")
+  global = markerData
+  var myLatlng = new google.maps.LatLng(markerData.latitude, markerData.longitude)
+
+  var num = index
+
+  var marker = new google.maps.Marker({
+
+    position: myLatlng,
+
+    title: 'Click to Zoom',
+
+    icon: 'https://chart.googleapis.com/chart?chst=d_map_pin_letter_withshadow&chld='+num+'|FF0000|000000'
+
+  });
+  marker.setMap(this.map);
+
+  // markersArray.push(marker);
+  return marker
+}
+
+
 
 function initializeMap() {
     proMapper.makeMap();
