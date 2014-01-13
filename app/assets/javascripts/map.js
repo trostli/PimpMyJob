@@ -38,7 +38,6 @@ proMapper.MakeMarkers = function(markerData) {
       proMapper.infoWindow.setOptions({disableAutoPan : true })
 
       proMapper.infoWindow.open(proMapper.map, marker)
-      debugger;
 
       var content =  'Title: '  + String(title) + ' compensation: ' + ' description: ' + String(address) + ' '
 
