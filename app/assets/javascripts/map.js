@@ -93,8 +93,9 @@ function initializeMap() {
     $('#category_form').on('submit', proMapper.getMarkers);
 }
 
-
-google.maps.event.addDomListener(window, "load", initializeMap);
+$(document).ready(function(){
+  google.maps.event.addDomListener(window, "load", initializeMap);
+})
 
 
 
