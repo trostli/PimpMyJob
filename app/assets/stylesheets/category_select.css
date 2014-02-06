@@ -1,7 +1,8 @@
 #category_selector {
   background-color: #2ecc71;
   padding: 0.5%;
-  position: absolute;
+  padding-bottom: 100px;
+  position: relative;
   top: 0;
   width: 100%;
   opacity: 1;
@@ -27,7 +28,8 @@ select {
   color:white;
   font-family: 'Open Sans', sans-serif;
   font-size: 0.80em;
-  padding: 0.75em;
+  padding: 0.45em;
+  margin-top: 1.0em;
   text-shadow:rgba(0,0,0,0) 0px -1px;
   width: 210px;
   -webkit-font-smoothing:antialiased;
