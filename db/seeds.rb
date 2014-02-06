@@ -1,3 +1,4 @@
+require 'Faker'
 
 def location_helper(coordinate_type)
   chance = rand(2)+1
