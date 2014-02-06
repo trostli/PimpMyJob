@@ -59,20 +59,8 @@ input {
   padding: 100px;
 }
 
-/*@media screen and (max-width: 650px) {
-  select {
-    margin: 0.1%;
-    width: 32%;
-    margin-bottom: 1%;
+@media screen and (max-width: 500px) {
+#category_selector {
+  padding-bottom: 200px;
   }
 }
-
-@media screen and (max-width: 500px) {
-  select {
-    margin: 0.1%;
-    width: 17%;
-    margin-bottom: 1%;
-    font-size: 0.7em;
-  }
-
-}*/
