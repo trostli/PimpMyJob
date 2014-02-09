@@ -42,14 +42,20 @@ proMapper.MakeMarkers = function(markerData) {
 
     google.maps.event.addListener(marker, 'mouseover', function() {
 
-      proMapper.infoWindow.setOptions({disableAutoPan : true })
+      proMapper.infoWindow.setOptions({disableAutoPan : false })
 
       proMapper.infoWindow.open(proMapper.map, marker)
 
       var content =  contentInfo;
       // var link = '<a href=/spots/' + spot_id + '>Reserve this Spot</a>'
 
-      proMapper.infoWindow.setContent(content)
+      proMapper.infoWindow.setContent(content);
+
+
+    });
+    var temp = document.getElementById("map-canvas");
+    google.maps.event.addListener(proMapper.map, 'click', function() {
+      proMapper.infoWindow.close();
 
     });
   });
