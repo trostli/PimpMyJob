@@ -74,7 +74,7 @@ proMapper.makeMarker = function (index, markerData) {
 
     title: 'Click to Zoom',
 
-    icon: 'https://chart.googleapis.com/chart?chst=d_map_pin_letter_withshadow&chld='+num+'|FF0000|000000'
+    icon: 'https://chart.googleapis.com/chart?chst=d_map_pin_letter_withshadow&chld=|FF0000|000000'
 
   });
   marker.setMap(this.map);
